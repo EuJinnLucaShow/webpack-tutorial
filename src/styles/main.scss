@@ -1,7 +1,11 @@
-$font-size: 1rem;
-$font-color: lch(53 105 40);
+$font-size: 2rem;
+$font-color: lch(60 80 140);
 
 html {
     font-size: $font-size;
     color: $font-color;
+}
+
+img {
+    width: 200px;
 }
