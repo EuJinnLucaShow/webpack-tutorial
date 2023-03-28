@@ -1,10 +1,10 @@
 import "./styles/main.scss";
-
+import banana from "./images/banana.svg";
 import example from "./images/example.png";
 
-// Test a background image url in CSS
-const imageBackground = document.createElement("div");
-imageBackground.classList.add("image");
+// Appending to the DOM
+const logo = document.createElement("img");
+logo.src = banana;
 
 const imagePublic = document.createElement("img");
 imagePublic.src = example;
@@ -24,4 +24,4 @@ heading.textContent = "Interesting!";
 
 // Append heading node to the DOM
 const app = document.querySelector("#root");
-app.append(heading, p, imagePublic);
+app.append(logo, heading, p, imagePublic);
