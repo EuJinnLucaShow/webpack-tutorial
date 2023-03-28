@@ -18,9 +18,6 @@ module.exports = {
     compress: true,
     hot: true,
     port: 8080,
-    // static: {
-    //   directory: path.resolve(__dirname, "./dist"),
-    // },
   },
   plugins: [
     new HtmlWebpackPlugin({
