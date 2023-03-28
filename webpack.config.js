@@ -26,6 +26,18 @@ module.exports = {
       template: path.resolve(__dirname, "./src/template.html"), // template file
       filename: "index.html", // output file
     }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "./src/01-color-switcher.html"),
+      filename: "01-color-switcher.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "./src/02-timer.html"),
+      filename: "02-timer.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "./src/03-promises.html"),
+      filename: "03-promises.html",
+    }),
     new CleanWebpackPlugin(),
     //  Only update what has changed on hot reload
     new webpack.HotModuleReplacementPlugin(),
