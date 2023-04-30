@@ -1,0 +1,141 @@
+@media screen and (max-width: 768px) {
+.gallery {
+    padding-bottom: 60px;
+}
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+    .grid {
+        row-gap: 15px;        
+    }
+}
+
+.grid__item {
+    display: block;    
+    // transition: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+        &:focus {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+                1px 4px 6px rgba(0, 0, 0, 0.16);
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+}
+
+.grid__item {
+    width: calc((100% - 60px) / 3);
+}
+
+@media screen and (max-width: 767px) {
+    .grid__item {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .grid__item {
+        width: calc((100% - 30px) / 2);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .grid__item:first-child .grid__box-link>.grid__style {
+        padding-bottom: 56px;
+    }
+}
+
+.grid__subtitle {
+    max-width: 370px;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+}
+
+.grid__text {
+    max-width: 370px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+
+.grid__style {
+    padding: 20px 24px 20px 24px;
+    background: $primary-white-color;
+    border: 1px solid #eeeeee;
+    border-top-style: none;
+}
+
+/* Синій оверлей з текстом на картках сторінки Портфоліо */
+
+.grid__box {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .grid__overlay,
+        &:focus .grid__overlay {
+            transform: translateY(0);
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+}
+
+.grid__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(101%);
+    transition: transform 250ms;
+}
+
+.grid__box-link:focus .grid__overlay {
+    transform: translateY(0);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.grid__item--hidden {
+    transform: scale(0.3);
+    position: absolute;
+
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+
+    border: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.grid__description {
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: $primary-white-color;
+
+    @media screen and (max-width: 480px) {
+        padding: calc(5px + 5vw) 24px;
+        font-size: calc(9px + 2vw);
+    }
+
+    @media screen and (min-width: 480px) {
+        padding: 77px 24px;
+        font-size: 18px;
+    }
+}
